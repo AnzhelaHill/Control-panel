@@ -33,7 +33,7 @@
                 <li><button type="button" class="language-option active" data-lang="pl" data-short="PL">Polski</button></li>
                 <li><button type="button" class="language-option" data-lang="en" data-short="EN">English</button></li>
                 <li><button type="button" class="language-option" data-lang="de" data-short="DE">Deutsch</button></li>
-                <li><button type="button" class="language-option" data-lang="fr" data-short="FR">Francais</button></li>
+                <li><button type="button" class="language-option" data-lang="fr" data-short="FR">Français</button></li>
                 <li><button type="button" class="language-option" data-lang="es" data-short="ES">Espanol</button></li>
                 <li><button type="button" class="language-option" data-lang="ro" data-short="RO">Romana</button></li>
                 <li><button type="button" class="language-option" data-lang="bg" data-short="BG">Bulgarski</button></li>
@@ -44,7 +44,7 @@
                 <option value="pl">Polski</option>
                 <option value="en">English</option>
                 <option value="de">Deutsch</option>
-                <option value="fr">Francais</option>
+                <option value="fr">Français</option>
                 <option value="es">Espanol</option>
                 <option value="ro">Romana</option>
                 <option value="bg">Bulgarski</option>
@@ -256,6 +256,10 @@
                             <label for="param-robot-15" data-translate-key="advancedStepsLabel">Ilość kroków:</label>
                             <input id="param-robot-15" name="param15" type="number" value=':="dbSettings".maxRobotSteps:'>
                         </div>
+                        <div>
+                            <label for="param-robot-16" data-translate-key="advancedManualVelocityLabel">Prędkość ramia w trybie ręcznym:</label>
+                            <input id="param-robot-16" name="param16" type="number" value=':="dbSettings".setManualVelocity:'>
+                        </div>
                     </div>
                     <div class="settings-group-row">
                         <div class="settings-group-block">
@@ -296,6 +300,10 @@
                                 <div class="settings-group-item">
                                     <label for="param-robot-8" data-translate-key="advancedAlignmentLabel">wyrównaniu:</label>
                                     <input id="param-robot-8" name="param8" type="number" value=':="dbSettings".allignVelocity:'>
+                                </div>
+                                <div class="settings-group-item">
+                                    <label for="param-robot-17" data-translate-key="advancedTurningLabel">skręcaniu:</label>
+                                    <input id="param-robot-17" name="param17" type="number" value=':="dbSettings".turningVelocity:'>
                                 </div>
                             </div>
                         </div>

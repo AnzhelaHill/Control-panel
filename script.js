@@ -53,6 +53,7 @@ const translations = {
         advancedRobotSpeedTitle: "Prędkość robota przy",
         advancedPositioningLabel: "pozycjonowaniu:",
         advancedAlignmentLabel: "wyrównaniu:",
+        advancedTurningLabel: "skręcaniu:",
         advancedDriveHysteresisTitle: "Histereza jazdy robota",
         advancedPlusLabel: "plus:",
         advancedMinusLabel: "minus:"
@@ -110,6 +111,7 @@ const translations = {
         advancedRobotSpeedTitle: "Robot speed when",
         advancedPositioningLabel: "positioning:",
         advancedAlignmentLabel: "aligning:",
+        advancedTurningLabel: "turning:",
         advancedDriveHysteresisTitle: "Robot drive hysteresis",
         advancedPlusLabel: "plus:",
         advancedMinusLabel: "minus:"
@@ -167,6 +169,7 @@ const translations = {
         advancedRobotSpeedTitle: "Robotergeschwindigkeit bei",
         advancedPositioningLabel: "Positionierung:",
         advancedAlignmentLabel: "Ausrichtung:",
+        advancedTurningLabel: "Drehen:",
         advancedDriveHysteresisTitle: "Roboterfahr-Hysterese",
         advancedPlusLabel: "plus:",
         advancedMinusLabel: "minus:"
@@ -224,6 +227,7 @@ const translations = {
         advancedRobotSpeedTitle: "Vitesse du robot lors de",
         advancedPositioningLabel: "positionnement :",
         advancedAlignmentLabel: "alignement :",
+        advancedTurningLabel: "virage :",
         advancedDriveHysteresisTitle: "Hystérésis de conduite du robot",
         advancedPlusLabel: "plus :",
         advancedMinusLabel: "moins :"
@@ -281,6 +285,7 @@ const translations = {
         advancedRobotSpeedTitle: "Velocidad del robot al",
         advancedPositioningLabel: "posicionamiento:",
         advancedAlignmentLabel: "alineación:",
+        advancedTurningLabel: "giro:",
         advancedDriveHysteresisTitle: "Histéresis de conducción del robot",
         advancedPlusLabel: "más:",
         advancedMinusLabel: "menos:"
@@ -338,6 +343,7 @@ const translations = {
         advancedRobotSpeedTitle: "Viteza robotului la",
         advancedPositioningLabel: "poziționare:",
         advancedAlignmentLabel: "aliniere:",
+        advancedTurningLabel: "viraj:",
         advancedDriveHysteresisTitle: "Histereză de conducere a robotului",
         advancedPlusLabel: "plus:",
         advancedMinusLabel: "minus:"
@@ -395,6 +401,7 @@ const translations = {
         advancedRobotSpeedTitle: "Скорост на робота при",
         advancedPositioningLabel: "позициониране:",
         advancedAlignmentLabel: "подравняване:",
+        advancedTurningLabel: "скръчване:",
         advancedDriveHysteresisTitle: "Хистерезис на движение на робота",
         advancedPlusLabel: "плюс:",
         advancedMinusLabel: "минус:"
@@ -452,6 +459,7 @@ const translations = {
         advancedRobotSpeedTitle: "Robot sebessége",
         advancedPositioningLabel: "pozicionálás:",
         advancedAlignmentLabel: "igazítás:",
+        advancedTurningLabel: "fordulás:",
         advancedDriveHysteresisTitle: "Robot meghajtás hiszterézis",
         advancedPlusLabel: "plusz:",
         advancedMinusLabel: "mínusz:"
@@ -1003,6 +1011,8 @@ function submitRobotForm() {
     const param13Val = $(paramString +'13').val();
     const param14Val = $(paramString +'14').val();
     const param15Val = $(paramString +'15').val();
+    const param16Val = $(paramString +'16').val();
+    const param17Val = $(paramString +'17').val();
 
     let postData = [];
     let settingsName = '"dbSettings"'
@@ -1021,6 +1031,8 @@ function submitRobotForm() {
     postData.push(escape(settingsName + '.distanceToResetSWLimitOfWM') + '=' + param13Val); 
     postData.push(escape(settingsName + '.correctFrontDistance') + '=' + param14Val); 
     postData.push(escape(settingsName + '.maxRobotSteps') + '=' + param15Val); 
+    postData.push(escape(settingsName + '.setManualVelocity') + '=' + param16Val); 
+    postData.push(escape(settingsName + '.turningVelocity') + '=' + param17Val); 
 
     const url = 'IOVariables.htm'; 
     const sdata = postData.join('&');
